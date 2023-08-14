@@ -1,25 +1,17 @@
 # Graph-Algorithms
-Graph Algorithms
-You need to redesign the road system of an imaginary country.
-	The country is composed of N cities (for simplicity numbered from 0 to N-1). Some pairs of cities are
-connected by bidirectional roads. We say that there is a path between different cities A and B if there exists
-a sequence of unique cities C1;C2;...;CM, such that C1 = A and CM = B and for each index i < M, there
-is a road between cities Ci and Ci+1.
-	The current state of the road network is miserable. Some pairs of cities are not connected by any path. On
-the other hand, other pairs of cities are connected by multiple different paths, and that leads to complicated
-traffic routing. You want to build some new roads and destroy some of the already existing roads in the
-country so that after the reconstruction there will exist exactly one path between every pair of distinct cities.
-As building new roads and destroying old ones costs a lot of money, you want to minimize the total cost
-spent on the reconstruction.
-	You are given three two-dimensional arrays:
-	 country[i][j]=1 or 0: there is an existing road between city i and j if and only if country[i][j]=1.
-	 build[i][j]: the cost for building a road between i and j. The values of build[i][j] are represented
-using English letters. A;B;...;Z represent 0; 1; ...; 25 and a; b; ...; z represent 26; 27; ...; 51. For
-example, if build[2][4]=b, then that means the cost for building a road between city 2 and city 4 is 27.
-	 destroy[i][j]: the cost for destroying a road between i and j. Again, the values are represented
-using English letters like the above.
-	Your task is to find and print the minimal cost needed for the road network reconstruction.
-	You don't need to worry about invalid inputs.
+
+Imagine you're tasked with redesigning the road system of a fictional country. This country consists of N cities, numbered from 0 to N-1. Pairs of cities are connected by bidirectional roads. A path exists between cities A and B if there's a sequence of distinct cities C1, C2, ..., CM, where C1 = A, CM = B, and for each index i < M, there's a road between cities Ci and Ci+1.
+
+The current road network is in a poor state. Some pairs of cities aren't connected by any path, while other pairs have multiple paths, causing complicated traffic routing. Your goal is to reconstruct the road system by building new roads and removing existing ones. However, these actions come with a cost, so you want to minimize the total expense.
+
+You're provided with three matrices:
+
+country[i][j]: A binary matrix where country[i][j] is 1 if a road exists between city i and city j.
+build[i][j]: The cost of building a road between city i and city j, represented using English letters (A-Z for 0-25, a-z for 26-51).
+destroy[i][j]: The cost of destroying a road between city i and city j, also represented using English letters.
+Your objective is to determine and output the minimum cost required to reconstruct the road network such that there's exactly one path between every pair of distinct cities.
+
+You can assume that the inputs will be valid and there's always a way to achieve a single path between every pair of cities. Your task is to compute and print the minimal cost needed for this road network reconstruction.
 
 	 Sample input 1: 000,000,000 ABD,BAC,DCA ABD,BAC,DCA
 	Note: 000,000,000 describes the two-dimensional array country. ABD,BAC,DCA describes the two-
